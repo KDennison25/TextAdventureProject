@@ -1,14 +1,15 @@
-const start = `You are a 4 star QB recruit out of High School, and many colleges want you to play for the next year but, you've narrowed it down to 2 choices...
+const start = `You are a 4 star QB recruit out of High School, and many colleges want you to play for the next year but, you've narrowed it down to 3 choices...
 click OK to continue `
 
-const enter = `Please enter 1 or 2 for your answer`
+const enter = `Please enter 1 or 2 (or 3 ONLY in the first question) for your answer`
 
 const gameOver = `Sorry, your career is OVER`
 
-const q1 = `The 2 teams you are down to are in you are:  
+const q1 = `The 3 teams you are down to are in you are:  
 1. Alabama 
+2. Kentucky
 OR
-2. Connecticut (UCONN) 
+3. Connecticut (UCONN) 
 ${enter}` // #1
 
 const gameOver1 = `Well, you chose one of the WORST colleges in football history! This isn't basketball! 
@@ -102,7 +103,7 @@ if (userInput == 1){
 
         
         if (userInput == 1){
-            alert(win)
+            alert(winA)
         } else {
             alert(gameOver5a)
         }
@@ -118,9 +119,32 @@ if (userInput == 1){
         alert(gameOver2a)
     }
 
-} 
-else {
-    alert(gameOver1)
-}
+}  
+
+     
+    else if (userInput == 2) {
+        userInput = prompt(q2b)
+        if (userInput == 1){
+            userInput = prompt(q3b)
+       
+           
+            if (userInput == 2){
+               userInput = alert(WinB)
+       
+               
+               
+               } else {
+                   alert(gameOver3b)
+               }
+       
+            } else {
+               alert(gameOver2b)
+            }
+          
+           }
+    
+ else {
+    alert(gameOver1) }
+
 
 // Secondary Path written but unable to code in time
